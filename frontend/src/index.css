@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-salon-pink: #FDF2F8;
+  --color-salon-beige: #F5F5DC;
+  --color-salon-dark: #1F2937;
+  --color-salon-primary: #EC4899;
+  --color-salon-secondary: #D946EF;
+}
+
+@layer base {
+  body {
+    @apply bg-salon-pink text-salon-dark antialiased transition-colors duration-300;
+  }
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/60 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  .dark .glass {
+    @apply bg-gray-800/60 border-gray-700/50;
+  }
+}
